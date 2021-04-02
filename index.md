@@ -1,4 +1,4 @@
-# p2🐼 - it really whips the bamboo's ass
+# p2🐼 it really whips the bamboo's ass
 
 Protocol for publishing and reading structured data in a decentralised network of peers.
 
