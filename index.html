@@ -14,27 +14,87 @@
     <meta property="og:site_name" content="p2panda" />
     <style>
       body {
-        font-family: Arial, sans-serif;
+        font-family: "Droid Sans Mono", Consolas, "Liberation Mono", Menlo, Courier,
+    monospace;
+        font-size: 18px;
         text-align: center;
       }
-      
+
+      header,
+      footer,
       main {
         margin: 0 auto;
-        max-width: 60rem;
+        max-width: 700px;
+      }
+
+      footer {
+        margin-bottom: 40px;
+        font-size: 30px;
+      }
+
+      h1 {
+        font-size: 60px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      table {
+        margin: 0 auto;
+        text-align: left;
+      }
+
+      th,
+      td {
+        padding: 5px;
+      }
+
+      a {
+        color: #333;
+      }
+
+      hr {
+        margin: 50px auto;
+        max-width: 100px;
+        border: 0;
+        border-top: 2px solid #ddd;
+      }
+
+      ul {
+        text-align: left;
+        list-style: none;
+        padding: 0;
+      }
+
+      li {
+        margin-bottom: 20px;
       }
     </style>
   </head>
   <body>
-    <main>
+    <header>
       <h1>p2🐼</h1>
-      <p>Protocol for publishing and reading structured data in a decentralised network of peers.</p>
+    </header>
+    <main>
+      <h2>p2panda</h2>
+      <p>p2panda is a protocol for publishing and reading structured data in a decentralised network of peers.</p>
+      <p>Messages are signed and published by clients using <a href="https://github.com/AljoschaMeyer/bamboo" target="_blank">Bamboo</a> data structures which get replicated over the network to other peers. p2panda allows for decentralised or federated network topologies or even hybrids of these and aims at running in web browsers without giving up on its cryptographic features.</p>
+      <hr />
+      <h2>Features</h2>
+      <ul>
+        <li><strong>Browser friendly:</strong> Since clients only sign and send new data to servers they can easily be implemented for websites.</li>
+        <li><strong>Open schemas:</strong> Clients suggest data schemas and schema migrations which servers can support, by validating, storing and indexing the data for the network.</li>
+        <li><strong>Encryption:</strong> Node communication is end-to-end encrypted, on-chain messages can be encrypted for particular users (asymmetrically) or groups sharing the same key (symmetrically).</li>
+        <li><strong>Single writer:</strong> Published data can only be changed by its original author.</li>
+        <li><strong>Local deletion:</strong> Data can partially be deleted without loosing verifiability and data integrity.</li>
+        <li><strong>Partial replication:</strong> Servers do not need to download the whole log to verify data.</li>
+        <li><strong>Flexible network topologies:</strong> Depending on the needs and chosen trade-offs of the users or communities a network can consist of federated servers or independent, fully decentralised offline-first nodes.</li>
+        <li><strong>Fork proof:</strong> Detection of forked logs and conflict resolution through voting.</li>
+      </ul>
+      <hr />
+      <h2>Further links</h2>
       <table>
-        <thead>
-          <tr>
-            <th>What</th>
-            <th>Where to reach</th>
-          </tr>
-        </thead>
         <tbody>
           <tr>
             <td><strong>GitHub</strong></td>
@@ -45,11 +105,15 @@
             <td><a href="https://github.com/p2panda/design-document">github.com/p2panda/design-document</a></td>
           </tr>
           <tr>
-            <td><strong>email</strong></td>
+            <td><strong>Email</strong></td>
             <td><a href="mailto:contributors@p2panda.org">contributors@p2panda.org</a></td>
           </tr>
         </tbody>
       </table>
+      <hr />
     </main>
+    <footer>
+      🎍
+    </footer>
   </body>
 </html>
