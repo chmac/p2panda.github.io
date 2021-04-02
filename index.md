@@ -1,6 +1,4 @@
-# p2:panda_face: - it really whips the bamboo's ass
-
-![p2panda logo](images/p2panda.png | width=250)
+# p2🐼 - it really whips the bamboo's ass
 
 Protocol for publishing and reading structured data in a decentralised network of peers.
 
