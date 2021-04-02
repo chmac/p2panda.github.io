@@ -14,6 +14,7 @@
     <meta property="og:site_name" content="p2panda" />
     <style>
       body {
+        padding: 20px;
         font-family: "Droid Sans Mono", Consolas, "Liberation Mono", Menlo, Courier,
     monospace;
         font-size: 18px;
@@ -48,6 +49,7 @@
       th,
       td {
         padding: 5px;
+        word-break: break-word;
       }
 
       a {
@@ -63,7 +65,8 @@
 
       img {
         margin: 0 auto;
-        max-width: 400px;
+        max-width: 100%;
+        width: 400px;
       }
 
       ul {
@@ -83,21 +86,21 @@
     </header>
     <main>
       <h2>p2panda</h2>
-      <p>p2panda is a protocol for publishing and reading structured data in a decentralised network of peers.</p>
-      <p>Messages are signed and published by clients using <a href="https://github.com/AljoschaMeyer/bamboo" target="_blank">Bamboo</a> data structures which get replicated over the network to other peers. p2panda allows for decentralised or federated network topologies or even hybrids of these and aims at running in web browsers without giving up on its cryptographic features.</p>
+      <p>p2panda is a peer-to-peer communications protocol for playful, secure, data-efficient, offline- and local-first web applications.</p>
+      <p>Messages in p2panda are signed and published by clients using the <a href="https://github.com/AljoschaMeyer/bamboo" target="_blank">Bamboo</a> append-only log data type which gets distributed over the network to other peers. p2panda allows for decentralised or federated network topologies or even hybrids of these and aims at running in web browsers without loosing its cryptographic features.</p>
       <hr />
       <img src="https://raw.githubusercontent.com/p2panda/design-document/master/images/pandas.jpg" />
       <hr />
       <h2>Features</h2>
       <ul>
-        <li><strong>Browser friendly:</strong> Since clients only sign and send new data to servers they can easily be implemented for websites.</li>
-        <li><strong>Open schemas:</strong> Clients suggest data schemas and schema migrations which servers can support, by validating, storing and indexing the data for the network.</li>
-        <li><strong>Encryption:</strong> Node communication is end-to-end encrypted, on-chain messages can be encrypted for particular users (asymmetrically) or groups sharing the same key (symmetrically).</li>
+        <li><strong>Browser friendly:</strong> Clients are lightweight and can easily be implemented for websites.</li>
+        <li><strong>Open schemas:</strong> Users suggest data schemas which can be installed on servers, validating, storing and indexing the data for the network.</li>
+        <li><strong>Encryption:</strong> Transport communication and messages are end-to-end encrypted via SSB's Secret Handshake and the Messaging Layer Security (MLS) protocol.</li>
         <li><strong>Single writer:</strong> Published data can only be changed by its original author.</li>
-        <li><strong>Local deletion:</strong> Data can partially be deleted without loosing verifiability and data integrity.</li>
-        <li><strong>Partial replication:</strong> Servers do not need to download the whole log to verify data.</li>
+        <li><strong>Local deletion:</strong> Data can partially be deleted without loosing verifiability and integrity.</li>
+        <li><strong>Partial replication:</strong> Servers do not need to download the whole log to verify them.</li>
         <li><strong>Flexible network topologies:</strong> Depending on the needs and chosen trade-offs of the users or communities a network can consist of federated servers or independent, fully decentralised offline-first nodes.</li>
-        <li><strong>Fork proof:</strong> Detection of forked logs and conflict resolution through voting.</li>
+        <li><strong>Fork proof:</strong> Automatic detection of forked logs.</li>
       </ul>
       <hr />
       <h2>Further links</h2>
