@@ -29,7 +29,6 @@
 
       footer {
         margin-bottom: 40px;
-        font-size: 12px;
       }
 
       h1 {
@@ -38,6 +37,12 @@
 
       h2 {
         font-size: 24px;
+        margin-bottom: 25px;
+      }
+
+      h3 {
+        font-size: 18px;
+        margin-top: 50px;
         margin-bottom: 25px;
       }
 
@@ -55,10 +60,18 @@
       a {
         color: #8fbc8f;
       }
-      
+
       p {
         line-height: 1.4;
         text-align: justify;
+      }
+
+      p.center {
+        text-align: center;
+      }
+
+      p.small {
+        font-size: 14px;
       }
 
       hr {
@@ -82,16 +95,17 @@
 
       li {
         margin-bottom: 25px;
+        line-height: 1.4;
       }
-      
-      .sticker {
-        height: 150px;
-        width: auto;
-      }
-      
+
       .logo {
-        height: 80px;
+        max-height: 80px;
         width: auto;
+        margin: 10px;
+      }
+
+      .sticker {
+        max-height: 150px;
       }
     </style>
   </head>
@@ -105,7 +119,7 @@
       <p>Messages in p2panda are signed and published by clients using the <a href="https://github.com/AljoschaMeyer/bamboo" target="_blank">Bamboo</a> append-only log data type which gets distributed over the network to other peers. p2panda allows for decentralised or federated network topologies or even hybrids of these and aims at running in web browsers without loosing its cryptographic features.</p>
       <hr />
       <img title="Service! Service!" src="https://raw.githubusercontent.com/p2panda/design-document/main/assets/pandas.jpg" />
-      <p><em>サービス！サービス！</em></p>
+      <p class="center"><em>サービス！サービス！</em></p>
       <hr />
       <h2>Topics we're interested in</h2>
       <ul>
@@ -124,6 +138,21 @@
         <li><strong>Partial replication:</strong> Nodes do not need to download the whole log to verify them.</li>
         <li><strong>Schemas:</strong> User data is stored in published, versioned data schemas so data can be reliably accessed across services.</li>
         <li><strong>Warmth:</strong> Computers make it easy to get carried away by their rigidly structured ways. However, every computer also contains an undeniable spark of pure chaos. We want to capture that spark to ignite a campfire for you to gather around and get cosy.</li>
+      </ul>
+      <hr />
+      <h2>Software</h2>
+      <h3>Libraries</h3>
+      <ul>
+        <li><strong><a href="">p2panda</a></strong>: Provides tools to write a client for the p2panda network. It is shipped both as a Rust crate p2panda-rs with WebAssembly bindings and a NPM package p2panda-js with TypeScript definitions running in NodeJS or any modern web browser.</li>
+      </ul>
+      <h3>Nodes</h3>
+      <ul>
+        <li><strong><a href="">aquadoggo</a></strong>: GraphQL node server for the p2panda network running as a standalone application or Rust crate you can embed in your mobile or desktop application, for example via <a href="https://tauri.app/">Tauri</a>.</li>
+      </ul>
+      <h3>Clients</h3>
+      <ul>
+        <li><strong><a href="">beep-boop</a></strong>: Chat client based on p2panda to experiment with. See it live under: <a href="https://p2panda.org/demo">p2panda.org/demo</a></li>
+        <li><strong><a href="">fishyfish</a></strong>: Command line interface to manage p2panda nodes.</li>
       </ul>
       <hr />
       <h2>Further links</h2>
@@ -160,12 +189,12 @@
         </tbody>
       </table>
       <hr />
-      <img class="sticker" src="images/p2panda-sticker.jpg" alt="p2panda sticker">
     </main>
     <footer>
-      <img class="logo" src="images/ngi-logo.png" alt="NGI Pointer logo">&nbsp;
+      <img class="logo sticker" src="images/p2panda-sticker.jpg" alt="p2panda sticker"><br />
+      <img class="logo" src="images/ngi-logo.png" alt="NGI Pointer logo">
       <img class="logo" src="images/eu-flag-logo.png" alt="EU flag logo">
-      <p><i>This project has received funding from the European Union’s Horizon 2020 research and innovation programme within the framework of the NGI-POINTER Project funded under grant agreement No 871528</i></p>
+      <p class="small"><i>This project has received funding from the European Union’s Horizon 2020 research and innovation programme within the framework of the NGI-POINTER Project funded under grant agreement No 871528</i></p>
     </footer>
   </body>
 </html>
